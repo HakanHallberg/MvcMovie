@@ -8,6 +8,7 @@ namespace MvcMovie.Models
 {
     public class Movie
     {
+        //kjhgjhg
         public int ID { get; set; }
         [Required]
         public string Title { get; set; }
