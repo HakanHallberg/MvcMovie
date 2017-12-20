@@ -11,9 +11,10 @@ using System;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    partial class MvcMovieContextModelSnapshot : ModelSnapshot
+    [Migration("20171220103109_Initial2")]
+    partial class Initial2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,21 +26,14 @@ namespace MvcMovie.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasMaxLength(30);
+                    b.Property<string>("Genre");
 
                     b.Property<decimal>("Price");
-
-                    b.Property<string>("Rating")
-                        .IsRequired()
-                        .HasMaxLength(5);
 
                     b.Property<DateTime>("ReleaseDate");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(60);
+                        .IsRequired();
 
                     b.HasKey("ID");
 
